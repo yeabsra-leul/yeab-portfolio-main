@@ -1,0 +1,203 @@
+.services-container{
+    background-image: url("../../assets/serv-back.png");
+    min-height: 100vh;
+    min-width: 100vw;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .header-content{
+        width: 100%;
+        margin-left: 5vw;
+        margin-top: 10vh;
+        h1{
+            font-size: 3rem;
+            font-weight: 600;
+            color: #ffd700;
+            text-align: center;
+        }
+    }
+    .text-animate-hover{
+        &:hover{
+            color: #fff;
+        }
+    }
+    .card-container{
+        height: 70vh;
+        position: relative;
+        display: flex;
+        padding: 30px 40px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 80px;
+
+        .card{
+            position: relative;
+            width: 350px;
+            height: 180px;
+            background: #333;
+            transition: 0.5s;
+            &:hover{
+                height: 490px;
+                .lines::before{
+                    animation-play-state: running;
+                }
+                .img-box{
+                    height: 250px;
+                    width: 250px;
+                    top: 25px;
+                }
+                .img-box img{
+                    opacity: 1;
+                }
+                .img-box::before{
+                    animation-play-state: running;
+                }
+                .content .details{
+                    transform: translateY(45px);
+                    padding: 60px 20px;
+                }
+                .content .details p,
+                .content .details a
+                {
+                    opacity: 1;
+                }
+            }
+            .lines{
+                position: absolute;
+                inset: 0;
+                background: #252323;
+                overflow: hidden;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 600px;
+                    height: 120px;
+                    background: linear-gradient(transparent,#45f3ff,#45f3ff,#45f3ff,transparent);
+                    opacity: 1;
+                    animation: animate 4s linear infinite;
+                    animation-play-state: paused;
+                    
+
+                } 
+                @keyframes animate {
+                    0%{
+                        transform: translate(-50%,-50%) rotate(0deg);
+                    }
+                    100%{
+                        transform: translate(-50%,-50%) rotate(360deg);
+                    }
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    inset: 5px;
+                    background: #20242B;
+                }
+                
+
+            }
+
+            .img-box{
+                position: absolute;
+                top: -60px;
+                left: 50%;
+                width: 200px;
+                height: 150px;
+                transform: translateX(-50%);
+                background: #252323;
+                transition: 0.5s;
+                z-index: 10;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::before{
+                     content: "";
+                     position: absolute;
+                     top: 50%;
+                     left: 50%;
+                     width: 500px;
+                     height: 150px;
+                     transform: translate((-50%,-50%));
+                     background: linear-gradient(transparent,#ffd700,#ffd700,transparent);
+                     animation: animate2 6s linear infinite;
+                     animation-play-state: paused;
+                }
+                @keyframes animate2 {
+                    0%{
+                        transform: translate(-50%,-50%) rotate(360deg);
+                    }
+                    100%{
+                        transform: translate(-50%,-50%) rotate(0deg);
+                    }
+                    
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    inset: 4px;
+                    background: #20242B;
+                }
+                img{
+                    position: absolute;
+                    width: 100px;
+                    z-index: 1;
+                    // filter: invert(1);
+                    opacity: 0.6;
+                    transition: 0.5s;
+                }
+            }
+            .content{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                overflow: hidden;
+                
+
+                .details{
+                    padding: 20px 20px;
+                    text-align: center;
+                    width: 100%;
+                    transition: 0.5s;
+                    transform: translateY(145px);
+                    
+                    h2{
+                        font-size: 1.5em;
+                        font-weight: 500;
+                        color: #45f3ff;
+                        line-height: 1.2em;
+                    }
+                    p{
+                        color: #fff;
+                        opacity: 0;
+                        transition: 0.5s;
+                    }  
+                    a{
+                        display: inline-block;
+                        padding: 8px 15px;
+                        background: #45f3ff;
+                        color: #292929;
+                        margin-top: 10px;
+                        text-decoration: none;
+                        opacity: 0;
+                        transition: 0.5s;
+
+                    }
+                    
+                }
+            }
+            
+
+        }
+    }
+}

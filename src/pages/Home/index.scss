@@ -1,0 +1,118 @@
+.container{
+    .main-content{
+        z-index: 55;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        // gap: 30vw;
+        padding-top: 5vw;
+        align-items: center;
+        position: relative;
+        
+        img{
+            margin-left: auto;
+            animation: fadeIn 2s 1s backwards;
+        }
+        .info-container{
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            width: 50%;
+            margin-left: auto;
+            padding-right: 2vw;
+            .info{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 6rem;
+                .text-info{
+                    font-weight: 600;
+                    .name{
+                        font-size: 3rem;
+                    }
+                    .desc{
+                        font-size: 2rem;
+                    }
+                }
+                .buttons{
+                    
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
+                    animation: fadeIn 2s 1s backwards;
+                    
+                    .link{
+                        display: flex;
+                        align-items: center;
+                        color: #ffd700;
+                        text-decoration: none;
+                        // background-color: #2E5077;
+                        height: 50px;
+                        justify-content: center;
+                        border-radius: 5px;
+                        // box-shadow: 4px 4px #2E5077 .25;
+                        border: 1px solid #ffd700 ;
+                        letter-spacing: 3px;
+                        &:hover{
+                            background: #ffd700;
+                            color: #333;
+                            transition: ease-in-out .7s;
+                        }
+                    }
+                    .hire-me{
+                        width: 130px;
+                    }
+                    .download-cv{
+                        display: flex;
+                        gap: .6rem;
+                        width: 200px;
+                    }
+                }
+            }
+            .socials{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: auto;
+                .line{
+                    background-color: #fff;
+                    width: 1px;
+                    height: 50px;
+                }
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                    .icon{
+                        width: 35px;
+                        height: 35px;
+                        opacity: .6;
+                        &:hover{
+                            opacity: 1;
+                            color: #ffd700;
+                            transition: ease-in-out .3s;
+                        
+                    }
+                    &:first-child{
+                        animation: fadeInRight 1s 1s backwards;
+                    }
+                    
+                    
+                    }
+                    
+                }
+                
+
+            }
+        }
+        
+    }
+    .waves{
+        img{
+            width: 100%;
+        }
+        width: 100%;
+        position: absolute;
+        bottom: -9vh;
+    }
+}
