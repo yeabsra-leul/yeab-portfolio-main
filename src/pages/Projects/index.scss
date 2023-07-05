@@ -7,7 +7,7 @@
     .header-content{
         width: 100%;
         text-align: center;
-        margin-top: 10vh;
+        margin-top: 15vh;
         h1{
             font-size: 3rem;
             font-weight: 600;
@@ -24,7 +24,7 @@
         height: 70vh;
         position: relative;
         display: flex;
-        padding: 30px 40px;
+        padding: 5px 40px;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -39,14 +39,14 @@
             border-radius: 16px;
             
             &:hover{
-                height: 490px;
+                height: 420px;
                 .lines::before{
                     animation-play-state: running;
                 }
                 .img-box{
-                    height: 250px;
-                    width: 250px;
-                    top: 25px;
+                    height: 230px;
+                    width: 230px;
+                    top: 20px;
                 }
                 .img-box img{
                     opacity: 1;
@@ -57,6 +57,7 @@
                 .content .details{
                     transform: translateY(45px);
                     padding: 60px 20px;
+                    transition: ease-in .5s;
                 }
                 .content .details p,
                 .content .details a
@@ -132,8 +133,9 @@
                     p{
                         color: #fff;
                         opacity: 0;
-                        transition: 0.5s;
-                    }  
+                        // transition: 0.5s;
+                    }
+
                     a{
                         display: inline-block;
                         padding: 8px 15px;

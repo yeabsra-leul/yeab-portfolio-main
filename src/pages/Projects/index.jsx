@@ -14,7 +14,7 @@ export default function Projects() {
       setTimeout(() => {
       setLetterClass('text-animate-hover')
       }, 3000)
-}, [])
+  }, [])
   return (
     <div className="project-container">
       <div className="header-content">
@@ -35,7 +35,7 @@ export default function Projects() {
           <div className="content">
             <div className="details">
               <h2>Project 1</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum officia quibusdam </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum  </p>
               <a href="#">See Project</a>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function Projects() {
           <div className="content">
             <div className="details">
               <h2>Project 2</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum officia quibusdam </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum  </p>
               <a href="#">See Project</a>
             </div>
           </div>
@@ -61,7 +61,7 @@ export default function Projects() {
           <div className="content">
             <div className="details">
               <h2>Project 3</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum officia quibusdam </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum </p>
               <a href="#">See Project</a>
             </div>
           </div>

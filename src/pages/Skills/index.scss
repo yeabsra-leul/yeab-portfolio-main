@@ -1,0 +1,32 @@
+.skills-container{
+    background-image: url("../../assets/skills-back1.png");
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    transition: 0.5s ease-in;
+    animation:fadeIn .5s .5s backwards;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .header-content{
+        width: 100%;
+        text-align: center;
+        margin-top: 10vh;
+        h1{
+            font-size: 3rem;
+            font-weight: 600;
+            color: #ffd700;
+        }
+    }
+    .text-animate-hover{
+        &:hover{
+            color: #fff;
+        }
+    }
+    .skills-card{
+        width: 50%;
+        margin-left: 20%;
+    }
+}
+
