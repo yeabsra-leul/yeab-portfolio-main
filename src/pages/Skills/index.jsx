@@ -8,15 +8,15 @@ import {ReactIcon} from "../../assets/react-icon.png"
 import { Icon } from '@mui/material';
 
 const skillData = [
-  { title: "JavaScript",bgcolor: "#36A5DB", completed: 60 },
-  { title: "React",bgcolor: "#36A5DB", completed: 30 },
-  { title: "Angular",bgcolor: "#36A5DB", completed: 53 },
-  { title: "React Native",bgcolor: "#36A5DB", completed: 40 },
-  { title: "Flutter",bgcolor: "#36A5DB", completed: 70 },
+  { title: "JavaScript",bgcolor: "#36A5DB", completed: 85 },
+  { title: "React",bgcolor: "#36A5DB", completed: 80 },
+  { title: "Angular",bgcolor: "#36A5DB", completed: 75 },
+  { title: "Next.js",bgcolor: "#36A5DB", completed: 75 },
+  { title: "Flutter",bgcolor: "#36A5DB", completed: 85 },
   { title: "Node.Js",bgcolor: "#36A5DB", completed: 80 },
-  { title: ".Net Core",bgcolor: "#36A5DB", completed: 93 },
-  { title: "Tailwind Css",bgcolor: "#36A5DB", completed: 83 },
-  { title: "Gsap",bgcolor: "#36A5DB", completed: 63 },
+  { title: ".Net Core",bgcolor: "#36A5DB", completed: 85 },
+  { title: "Tailwind Css",bgcolor: "#36A5DB", completed: 85 },
+  { title: "Gsap",bgcolor: "#36A5DB", completed: 70 },
 ];
 
 export default function Skills() {
@@ -24,8 +24,6 @@ export default function Skills() {
   const [completed, setCompleted] = useState(0);
   const [skills, setSkills] = useState([])
 
-  // // eslint-disable-next-line no-undef
-  // TweenMax.to(yourElement, 1, {rotation:360, ease:Linear.easeNone, repeat:-1})
   useEffect(() => {
     setTimeout(() => {
       const updatedSkills = skillData.map((item) => ({ ...item, completed: 0,  }));
@@ -36,10 +34,6 @@ export default function Skills() {
       const updatedSkills = skillData.map((item,idx) => ({ ...item, completed:skillData[idx].completed }));
     setSkills(updatedSkills);
     },1100)
-
-    // setTimeout(() => {
-    //   skillData.map((item,idx) =>setCompleted(skillData[idx].completed))
-    // },3000)
 
       setTimeout(() => {
         setLetterClass('text-animate-hover')
